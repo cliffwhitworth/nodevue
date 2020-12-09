@@ -1,0 +1,62 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    margin: 3rem;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #666;
+    color: white;
+    text-align: center;
+}
+
+header a {
+    margin-right: 16px;
+    text-decoration: none;
+    color: white;
+}
+
+header a:hover {
+    color: black !important;
+}
+
+section {
+    text-align: left !important;
+}
+
+section p {
+    color: black;
+}
+  
+#boxes {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    margin: 3rem;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-image {
+    width: 140px;
+    height: 140px;   
+    float: left;
+    margin-right: 23px; 
+}
+
+.add-person {
+    float: left;
+}
+
+.delete-all {
+    float: right;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{>head}}
+        <script src="./utils/faker.min.js"></script>
+        <script src="./js/people.js" defer></script>
+    </head>
+    <body>
+        {{>header}}
+        <section id="people">
+          <div class="container">
+              <button @click="addPerson" class="btn-success add-person">Add Person</button>
+              <span v-if="peopleArray.length > 0">
+                  <button @click="deleteAll" class="btn-danger delete-all">Delete All</button>
+              </span>
+              <br /><br />
+              <div class="card mb-3" v-for="(person, index) in peopleArray">
+                  <h3 class="card-header">${person.firstName} ${person.lastName}</h3>
+                  <div class="row no-gutters">                                  
+                      <div class="card-body"> 
+                          <img class="card-image" alt="avatar" :src="person.avatar" />                  
+                          <h4 class="card-title">${person.email}</h4>
+                          <div class="card-text">
+                            ${person.description}<br />
+                            ${dateCreated}<br />
+                            <button @click="deleteMe(index)" class="btn btn-warning">Delete Me</button>
+                          </div>
+                      </div> 
+                  </div>                                 
+              </div>            
+          </div>
+        </section>
+    </body>
+</html>
